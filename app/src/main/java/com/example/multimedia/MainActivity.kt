@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
                 et_1.visibility = View.VISIBLE
             }else{
                 et_1.onEditorAction(EditorInfo.IME_ACTION_DONE)
+                et_1.clearFocus()
                 jokerBatman()
             }
         }
@@ -27,10 +28,12 @@ class MainActivity : AppCompatActivity() {
         iv_1.visibility = View.VISIBLE
         if(et_1.text.toString().toLowerCase().equals("joker")){
             iv_1.setImageResource(R.mipmap.ic_jokern);
-        }else if(et_1.text.toString().toLowerCase().equals("batman")){
+        }else if(et_1.text.toString().toLowerCase().equals("wayne")){
             iv_1.setImageResource(R.mipmap.ic_batman);
         }else{
-
+            iv_1.setImageResource(R.mipmap.ic_what);
+            et_1.setText("Introduce tu nombre")
         }
+
     }
 }
